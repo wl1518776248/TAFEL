@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <Material>
+    <WorkOrder1>TF-B003-1803-001-JR</WorkOrder1>
+    <MaterielBatch1>JR-AC01</MaterielBatch1>
+    <materielCheckQuantity1>5000</materielCheckQuantity1>
+    <materielCheckUserName1>110120</materielCheckUserName1>
+    <materielCheckDate1>05-07 09:17:03</materielCheckDate1>
+    <batchNo1>正极物料</batchNo1>
+    <WorkOrder2>TF-B003-1803-001-JR</WorkOrder2>
+    <MaterielBatch2>JR-CC01</MaterielBatch2>
+    <materielCheckQuantity2>5000</materielCheckQuantity2>
+    <materielCheckUserName2>110120</materielCheckUserName2>
+    <materielCheckDate2>05-07 09:20:08</materielCheckDate2>
+    <batchNo2>负极物料</batchNo2>
+    <WorkOrder3>TF-B003-1803-001-JR</WorkOrder3>
+    <MaterielBatch3>JR-G01</MaterielBatch3>
+    <materielCheckQuantity3>5000</materielCheckQuantity3>
+    <materielCheckUserName3>110120</materielCheckUserName3>
+    <materielCheckDate3>05-07 09:21:11</materielCheckDate3>
+    <batchNo3>隔膜物料</batchNo3>
+    <WorkOrder4>TF-B003-1803-001-JR</WorkOrder4>
+    <MaterielBatch4>JR-G01</MaterielBatch4>
+    <materielCheckQuantity4>5000</materielCheckQuantity4>
+    <materielCheckUserName4>110120</materielCheckUserName4>
+    <materielCheckDate4>05-07 09:21:47</materielCheckDate4>
+    <batchNo4>隔膜物料</batchNo4>
+    <WorkOrder5>
+    </WorkOrder5>
+    <MaterielBatch5>
+    </MaterielBatch5>
+    <materielCheckQuantity5>
+    </materielCheckQuantity5>
+    <materielCheckUserName5>
+    </materielCheckUserName5>
+    <materielCheckDate5>
+    </materielCheckDate5>
+    <batchNo5>
+    </batchNo5>
+    <WorkOrder6>
+    </WorkOrder6>
+    <MaterielBatch6>
+    </MaterielBatch6>
+    <materielCheckQuantity6>
+    </materielCheckQuantity6>
+    <materielCheckUserName6>
+    </materielCheckUserName6>
+    <materielCheckDate6>
+    </materielCheckDate6>
+    <batchNo6>
+    </batchNo6>
+  </Material>
+  <Setting>
+    <UserName>admin</UserName>
+    <PassWord>123</PassWord>
+    <passWord>222110217155966551481008621514177187744</passWord>
+    <equipmentEncoding>NJ0417P00053</equipmentEncoding>
+    <equipmentName>LEBV220H-2</equipmentName>
+    <equipmentType>A</equipmentType>
+    <equipmentIPv4>10.2.16.102</equipmentIPv4>
+    <PLCIPv4>192.168.25.1</PLCIPv4>
+    <HostIPv4>10.3.26.187</HostIPv4>
+    <HostIPv4Port>5000</HostIPv4Port>
+    <MesPort>http://10.2.3.2:8090/TafelWebService.asmx</MesPort>
+    <shortMold>0</shortMold>
+  </Setting>
+</System>

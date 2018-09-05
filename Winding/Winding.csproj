@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEB3AE3C-93DF-4C20-8E34-330C1183C848}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Winding</RootNamespace>
+    <AssemblyName>Winding</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CIPCompolet, Version=1.7.0.0, Culture=neutral, PublicKeyToken=f3505d5782c23c5d, processorArchitecture=MSIL" />
+    <Reference Include="CIPPortCompolet, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4708ecb14a494255, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SECSwell, Version=1.2.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SECSwell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VariableCompolet, Version=1.6.0.0, Culture=neutral, PublicKeyToken=f3505d5782c23c5d, processorArchitecture=MSIL" />
+    <Reference Include="WinFormsUI.Docking">
+      <HintPath>Dll\WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bas\CheckPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\CheckPlan.Designer.cs">
+      <DependentUpon>CheckPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\CheckProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\CheckProject.Designer.cs">
+      <DependentUpon>CheckProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Classes.Designer.cs">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\MaterialsWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\MaterialsWarehouse.Designer.cs">
+      <DependentUpon>MaterialsWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Parameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Parameter.Designer.cs">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Personnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Personnel.Designer.cs">
+      <DependentUpon>Personnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Process.Designer.cs">
+      <DependentUpon>Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\ReplaceRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\ReplaceRecord.Designer.cs">
+      <DependentUpon>ReplaceRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\TeamGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\TeamGroup.Designer.cs">
+      <DependentUpon>TeamGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\VulnerablePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\VulnerablePart.Designer.cs">
+      <DependentUpon>VulnerablePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bas\Workshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bas\Workshop.Designer.cs">
+      <DependentUpon>Workshop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cs\EndProcess.cs" />
+    <Compile Include="Cs\FileReadSave.cs" />
+    <Compile Include="Cs\GlobalVariable.cs" />
+    <Compile Include="Cs\InterfaceCheck.cs" />
+    <Compile Include="Cs\MD5Encrypt.cs" />
+    <Compile Include="Cs\OmronVariable.cs" />
+    <Compile Include="Cs\SerPort.cs" />
+    <Compile Include="Cs\Setting.cs" />
+    <Compile Include="Cs\Tree.cs" />
+    <Compile Include="Cs\VariableChanged.cs" />
+    <Compile Include="Cs\VariableChangedEven.cs" />
+    <Compile Include="Cs\WriteToTxt.cs" />
+    <Compile Include="Cs\XmlConverter.cs" />
+    <Compile Include="Equ\AlarmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\AlarmMessage.Designer.cs">
+      <DependentUpon>AlarmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equ\EquipmentActivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\EquipmentActivation.Designer.cs">
+      <DependentUpon>EquipmentActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equ\MaintainMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\MaintainMessage.Designer.cs">
+      <DependentUpon>MaintainMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equ\OEEAnalyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\OEEAnalyze.Designer.cs">
+      <DependentUpon>OEEAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equ\PointInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\PointInspection.Designer.cs">
+      <DependentUpon>PointInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equ\StaticParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equ\StaticParameter.Designer.cs">
+      <DependentUpon>StaticParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pro\ArtificialCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\ArtificialCode.Designer.cs">
+      <DependentUpon>ArtificialCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\CodeProtected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\CodeProtected.Designer.cs">
+      <DependentUpon>CodeProtected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\FirstArticleInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\FirstArticleInspection.Designer.cs">
+      <DependentUpon>FirstArticleInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\LocalFileClosed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\LocalFileClosed.Designer.cs">
+      <DependentUpon>LocalFileClosed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\MaterialConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\MaterialConsumption.Designer.cs">
+      <DependentUpon>MaterialConsumption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\MaterielCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\MaterielCheck.Designer.cs">
+      <DependentUpon>MaterielCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\OffLineData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\OffLineData.Designer.cs">
+      <DependentUpon>OffLineData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\ProductionMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\ProductionMonitoring.Designer.cs">
+      <DependentUpon>ProductionMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\ProductionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\ProductionReport.Designer.cs">
+      <DependentUpon>ProductionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\ShiftProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\ShiftProduction.Designer.cs">
+      <DependentUpon>ShiftProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pro\WorksheetManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pro\WorksheetManagement.Designer.cs">
+      <DependentUpon>WorksheetManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rec\RecipeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rec\RecipeName.Designer.cs">
+      <DependentUpon>RecipeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rec\RecipeStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rec\RecipeStructure.Designer.cs">
+      <DependentUpon>RecipeStructure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rec\TechnologicalParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rec\TechnologicalParameter.Designer.cs">
+      <DependentUpon>TechnologicalParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rec\TechnologicalStandard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rec\TechnologicalStandard.Designer.cs">
+      <DependentUpon>TechnologicalStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\AbnormalMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\AbnormalMessage.Designer.cs">
+      <DependentUpon>AbnormalMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\CPKAnalyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\CPKAnalyze.Designer.cs">
+      <DependentUpon>CPKAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\EquipmentHalt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\EquipmentHalt.Designer.cs">
+      <DependentUpon>EquipmentHalt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\PercentPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\PercentPass.Designer.cs">
+      <DependentUpon>PercentPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\QualityDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\QualityDetails.Designer.cs">
+      <DependentUpon>QualityDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep\SPCAnalyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rep\SPCAnalyze.Designer.cs">
+      <DependentUpon>SPCAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\EquipmentNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\EquipmentNumber.Designer.cs">
+      <DependentUpon>EquipmentNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\frmInLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\frmInLogin.Designer.cs">
+      <DependentUpon>frmInLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\IPv4Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\IPv4Address.Designer.cs">
+      <DependentUpon>IPv4Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PortManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\PortManage.Designer.cs">
+      <DependentUpon>PortManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SingleNetwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sys\SingleNetwork.Designer.cs">
+      <DependentUpon>SingleNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bas\CheckPlan.resx">
+      <DependentUpon>CheckPlan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\CheckProject.resx">
+      <DependentUpon>CheckProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Classes.resx">
+      <DependentUpon>Classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Material.resx">
+      <DependentUpon>Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\MaterialsWarehouse.resx">
+      <DependentUpon>MaterialsWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Parameter.resx">
+      <DependentUpon>Parameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Personnel.resx">
+      <DependentUpon>Personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Process.resx">
+      <DependentUpon>Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\ReplaceRecord.resx">
+      <DependentUpon>ReplaceRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\TeamGroup.resx">
+      <DependentUpon>TeamGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\VulnerablePart.resx">
+      <DependentUpon>VulnerablePart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bas\Workshop.resx">
+      <DependentUpon>Workshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\AlarmMessage.resx">
+      <DependentUpon>AlarmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\EquipmentActivation.resx">
+      <DependentUpon>EquipmentActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\MaintainMessage.resx">
+      <DependentUpon>MaintainMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\OEEAnalyze.resx">
+      <DependentUpon>OEEAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\PointInspection.resx">
+      <DependentUpon>PointInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equ\StaticParameter.resx">
+      <DependentUpon>StaticParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Pro\ArtificialCode.resx">
+      <DependentUpon>ArtificialCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\CodeProtected.resx">
+      <DependentUpon>CodeProtected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\FirstArticleInspection.resx">
+      <DependentUpon>FirstArticleInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\LocalFileClosed.resx">
+      <DependentUpon>LocalFileClosed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\MaterialConsumption.resx">
+      <DependentUpon>MaterialConsumption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\MaterielCheck.resx">
+      <DependentUpon>MaterielCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\OffLineData.resx">
+      <DependentUpon>OffLineData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\ProductionMonitoring.resx">
+      <DependentUpon>ProductionMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\ProductionReport.resx">
+      <DependentUpon>ProductionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\ShiftProduction.resx">
+      <DependentUpon>ShiftProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pro\WorksheetManagement.resx">
+      <DependentUpon>WorksheetManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rec\RecipeName.resx">
+      <DependentUpon>RecipeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rec\RecipeStructure.resx">
+      <DependentUpon>RecipeStructure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rec\TechnologicalParameter.resx">
+      <DependentUpon>TechnologicalParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rec\TechnologicalStandard.resx">
+      <DependentUpon>TechnologicalStandard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\AbnormalMessage.resx">
+      <DependentUpon>AbnormalMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\CPKAnalyze.resx">
+      <DependentUpon>CPKAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\EquipmentHalt.resx">
+      <DependentUpon>EquipmentHalt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\PercentPass.resx">
+      <DependentUpon>PercentPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\QualityDetails.resx">
+      <DependentUpon>QualityDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep\SPCAnalyze.resx">
+      <DependentUpon>SPCAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\EquipmentNumber.resx">
+      <DependentUpon>EquipmentNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\frmInLogin.resx">
+      <DependentUpon>frmInLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\IPv4Address.resx">
+      <DependentUpon>IPv4Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\PortManage.resx">
+      <DependentUpon>PortManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sys\SingleNetwork.resx">
+      <DependentUpon>SingleNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\TafelWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Equipment.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Logout.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Maxmize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\minmize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\MinShow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\production.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Report.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\SetUp.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Tafel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Technology.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Title.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Set\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\pass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\unpass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\notify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\titleWinding.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\login.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\login2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\title2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.2.3.6:8081/MES_WebService/TafelWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://10.2.3.6:8081/MES_WebService/TafelWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Winding_WebReference_TafelWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WebReference\TafelWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Online .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pic\Offline.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

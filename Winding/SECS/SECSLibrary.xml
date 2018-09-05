@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SECSLibrary Name="TTSKY AbstractSECSLibrary" Description="TTSKY SECS Default Libray">
+  <SECSMessage Name="S6F11">
+    <MessageName>PodPlace</MessageName>
+    <Description>PodPlaced</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">1</U2>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S7F19">
+    <MessageName>S7F19</MessageName>
+    <Description>EAP Query PPID</Description>
+    <Stream>7</Stream>
+    <Function>19</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S7F20</AutoReplyMessageName>
+    <DataItem />
+  </SECSMessage>
+  <SECSMessage Name="S7F20">
+    <MessageName>S7F20</MessageName>
+    <Description>PPID List Reply</Description>
+    <Stream>7</Stream>
+    <Function>20</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <A Count="3" Fixed="False" ItemName="PPID">LEE</A>
+        <A Count="8" Fixed="False" ItemName="NewITem">00D25H2A</A>
+        <A Count="8" Fixed="False" ItemName="NewITem">00D25H2B</A>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S2F41_Load">
+    <MessageName>S2F41_Load</MessageName>
+    <Description>UnLoadPlate</Description>
+    <Stream>2</Stream>
+    <Function>41</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S2F42</AutoReplyMessageName>
+    <DataItem>
+      <L Count="2" Fixed="False" ItemName="">
+        <A Count="4" Fixed="False" ItemName="LOAD">LOAD</A>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S2F41_Unload">
+    <MessageName>S2F41_Unload</MessageName>
+    <Description>UnLoadPlate</Description>
+    <Stream>2</Stream>
+    <Function>41</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S2F42</AutoReplyMessageName>
+    <DataItem>
+      <L Count="2" Fixed="False" ItemName="">
+        <A Count="6" Fixed="False" ItemName="UNLOAD">UNLOAD</A>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S2F42">
+    <MessageName>S2F42</MessageName>
+    <Description>UnLoadPlateCompleted</Description>
+    <Stream>2</Stream>
+    <Function>42</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <L Count="2" Fixed="False" ItemName="">
+        <B Count="1" Fixed="False" ItemName="NewITem">00 </B>
+        <L Count="0" Fixed="False" ItemName="ParamList" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F11">
+    <MessageName>S6F11</MessageName>
+    <Description>Load Plate Complted</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">2</U2>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S2F27">
+    <MessageName>S2F27</MessageName>
+    <Description>StartProcess</Description>
+    <Stream>2</Stream>
+    <Function>27</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S2F28</AutoReplyMessageName>
+    <DataItem>
+      <L Count="4" Fixed="False" ItemName="">
+        <B Count="1" Fixed="False" ItemName="NewITem">00 </B>
+        <A Count="3" Fixed="False" ItemName="PPID">LEE</A>
+        <B Count="1" Fixed="False" ItemName="NewITem">00 </B>
+        <L Count="1" Fixed="False" ItemName="NewITem">
+          <A Count="7" Fixed="False" ItemName="waferID">wafer01</A>
+        </L>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S2F28">
+    <MessageName>S2F28</MessageName>
+    <Description>StartReply</Description>
+    <Stream>2</Stream>
+    <Function>28</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="1" Fixed="False" ItemName="">00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F11">
+    <MessageName>S6F11</MessageName>
+    <Description>Process Start</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">3</U2>
+        <L Count="1" Fixed="False" ItemName="NewITem">
+          <L Count="2" Fixed="False" ItemName="NewITem">
+            <U2 Count="1" Fixed="False" ItemName="RPTID">9</U2>
+            <L Count="2" Fixed="False" ItemName="NewITem">
+              <A Count="0" Fixed="False" ItemName="PPID"></A>
+              <L Count="0" Fixed="False" ItemName="NewITem" />
+            </L>
+          </L>
+        </L>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F11">
+    <MessageName>S6F11</MessageName>
+    <Description>ProcessEnd</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">4</U2>
+        <L Count="1" Fixed="False" ItemName="NewITem">
+          <L Count="2" Fixed="False" ItemName="NewITem">
+            <U2 Count="1" Fixed="False" ItemName="NewITem">9</U2>
+            <L Count="2" Fixed="False" ItemName="NewITem">
+              <A Count="1" Fixed="False" ItemName="PPID">0</A>
+              <L Count="0" Fixed="False" ItemName="NewITem" />
+            </L>
+          </L>
+        </L>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F11">
+    <MessageName>S6F11</MessageName>
+    <Description>UnLoadPlate</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">5</U2>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F11">
+    <MessageName>S6F11</MessageName>
+    <Description>PodRemoved</Description>
+    <Stream>6</Stream>
+    <Function>11</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S6F12</AutoReplyMessageName>
+    <DataItem>
+      <L Count="3" Fixed="False" ItemName="">
+        <U2 Count="1" Fixed="False" ItemName="NewITem">11</U2>
+        <U2 Count="1" Fixed="False" ItemName="CEID">6</U2>
+        <L Count="0" Fixed="False" ItemName="NewITem" />
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S6F12">
+    <MessageName>S6F12</MessageName>
+    <Description>Event Report Acknowledge</Description>
+    <Stream>6</Stream>
+    <Function>12</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="1" Fixed="True" ItemName="ACKC6">00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S1F1">
+    <MessageName>IniCommunication</MessageName>
+    <Description>Are You There Request</Description>
+    <Stream>1</Stream>
+    <Function>1</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>True</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem />
+  </SECSMessage>
+  <SECSMessage Name="S1F2">
+    <MessageName>S1F2</MessageName>
+    <Description>Data signifying that the equipment is alive</Description>
+    <Stream>1</Stream>
+    <Function>2</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <L Count="2" Fixed="True" ItemName="">
+        <A Count="6" Fixed="True" ItemName="MDLN">MODULE</A>
+        <A Count="6" Fixed="True" ItemName="SOFTREV">V01R01</A>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S1F3">
+    <MessageName>S1F3</MessageName>
+    <Description>Selected Equipment Status Request</Description>
+    <Stream>1</Stream>
+    <Function>3</Function>
+    <Direction>H-&gt;E</Direction>
+    <Wait>True</Wait>
+    <AutoReply>True</AutoReply>
+    <AutoReplyMessageName>S1F4</AutoReplyMessageName>
+    <DataItem>
+      <L Count="1" Fixed="False" ItemName="SVIDCOUNT">
+        <A Count="5" Fixed="True" ItemName="SVID">00001</A>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S1F4">
+    <MessageName>S1F4</MessageName>
+    <Description>Selected Equipment Status Data</Description>
+    <Stream>1</Stream>
+    <Function>4</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <L Count="1" Fixed="False" ItemName="SVCOUNT">
+        <A Count="0" Fixed="True" ItemName="SV"></A>
+      </L>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F1">
+    <MessageName>S9F1</MessageName>
+    <Description>Unrecognized Device ID</Description>
+    <Stream>9</Stream>
+    <Function>1</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="10" Fixed="True" ItemName="MHEAD">00 00 00 00 00 00 00 00 00 00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F3">
+    <MessageName>S9F3</MessageName>
+    <Description>Unrecognized Stream Type</Description>
+    <Stream>9</Stream>
+    <Function>3</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="10" Fixed="True" ItemName="MHEAD">00 00 00 00 00 00 00 00 00 00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F5">
+    <MessageName>S9F5</MessageName>
+    <Description>Unrecognized Function Type</Description>
+    <Stream>9</Stream>
+    <Function>5</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="10" Fixed="True" ItemName="MHEAD">00 00 00 00 00 00 00 00 00 00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F7">
+    <MessageName>S9F7</MessageName>
+    <Description>Illegal Data</Description>
+    <Stream>9</Stream>
+    <Function>7</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="10" Fixed="True" ItemName="MHEAD">00 00 00 00 00 00 00 00 00 00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F9">
+    <MessageName>S9F9</MessageName>
+    <Description>Transaction Timer Timeout</Description>
+    <Stream>9</Stream>
+    <Function>9</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <B Count="10" Fixed="True" ItemName="MHEAD">00 00 00 00 00 00 00 00 00 00 </B>
+    </DataItem>
+  </SECSMessage>
+  <SECSMessage Name="S9F13">
+    <MessageName>S9F13</MessageName>
+    <Description>Conversation Timeout</Description>
+    <Stream>9</Stream>
+    <Function>13</Function>
+    <Direction>E-&gt;H</Direction>
+    <Wait>False</Wait>
+    <AutoReply>False</AutoReply>
+    <AutoReplyMessageName></AutoReplyMessageName>
+    <DataItem>
+      <L Count="2" Fixed="True" ItemName="">
+        <A Count="0" Fixed="True" ItemName="MEXP"></A>
+        <A Count="0" Fixed="True" ItemName="EDID"></A>
+      </L>
+    </DataItem>
+  </SECSMessage>
+</SECSLibrary>
